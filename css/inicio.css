@@ -1,0 +1,142 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+/* Contenedor del header */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  flex-wrap: wrap;
+  color: #00bfff;
+}
+/* Menú de navegación */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #00bfff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav ul li {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* Sección principal */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  background-color: #fff;
+  border-bottom: 2px solid #eee;
+  flex-wrap: wrap;
+}
+
+/* Alternar orden si es necesario */
+.hero:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.hero-texto {
+  flex: 1;
+  padding: 20px;
+}
+
+.hero-texto h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.hero-texto h1 span {
+  color: #007BFF;
+}
+
+.hero-texto ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.hero-texto ul li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 25px;
+}
+
+.hero-texto ul li::before {
+  content: '✔';
+  color: #007BFF;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Imagen */
+.hero-imagen {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero-imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .hero-texto h1 {
+    font-size: 2rem;
+  }
+}

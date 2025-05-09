@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+   <header>
+  <div class="container">
+    <h1>Formulario de Contacto</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="index.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <main>
+        <form id="contactForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required placeholder="Escriba su nombre completo ">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="Escriba su correo">
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" required placeholder="Esctribe algo aqui"></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="resultado"></div>
+    </main>
+    
+        <center><p>&copy; 2025 My web site </p></center>
+    </footer>
+    <script src="./js.js"></script>
+</body>
+</html>
